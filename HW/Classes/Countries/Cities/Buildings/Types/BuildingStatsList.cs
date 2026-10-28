@@ -1,5 +1,4 @@
 /*
-                    УДАЛИТЕ ПРОГРАММИРОВАНИЕ С МИРА ПОЖАЛУЙСТА
    .......................................:=%%%%%%::..............................
    .....................................=%%%%%%%%%%%*.............................
    ...................................:%%%%%%%%%%%%%%%............................
@@ -39,7 +38,7 @@ namespace HW.Classes;
 
 public class BuildingStatsList
 {
-    public List<BuildingStatsType> List { get; } = new()
+    public static List<BuildingStatsType> List { get; } = new()
     {
         new BuildingStatsType(BuildingType.House, 900.0, 360.0, -300.0, 100.0),
         new BuildingStatsType(BuildingType.Apartment, 400.0, 180.0, -120.0, 1000.0),
@@ -57,9 +56,8 @@ public class BuildingStatsList
         new BuildingStatsType(BuildingType.School, 100.0, -60.0, -16.0, 5000.0),
         new BuildingStatsType(BuildingType.Kindergarten, 350.0, -180.0, -50.0, 1000.0)
     };
-
     
-    public BuildingStatsType FindByType(BuildingType type)
+    public static BuildingStatsType FindByType(BuildingType type)
     {
         return List.Find(stats => stats.Type == type) ?? 
                throw new ($"Im tired of being a catgirl who protects you from exceptions.\n Anyways,\n Building type '{type}' doesnt exist.");

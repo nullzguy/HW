@@ -2,13 +2,15 @@ namespace HW.Classes;
 
 public class Cities
 {
-    private List<City> List { get; }
-    public double TotalArea { get; }
+    public List<City> List { get; }
+    public double TotalHappiness => List.Sum(h => h.Buildings.Happiness);
+    public double TotalGDP => List.Sum(g => g.Buildings.GDP);
+    public double TotalFoodKg => List.Sum(f => f.Buildings.Food);
+    public double TotalArea => List.Sum(a => a.SqrKm);
 
     public Cities()
     {
         List = new();
-        TotalArea = List.Sum(a => a.SqrKm);
     }
     
     public void Add(City c)

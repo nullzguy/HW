@@ -2,7 +2,7 @@ namespace HW.Classes;
 
 public class Resources
 {
-    private List<Resource> List { get; }
+    public List<Resource> List { get; }
 
     public Resources()
     {
